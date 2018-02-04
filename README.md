@@ -1,7 +1,7 @@
 # Bitty Mustache
 
 [![Build Status](https://travis-ci.org/bittyphp/bitty-mustache.svg?branch=master)](https://travis-ci.org/bittyphp/bitty-mustache)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/e34be4340dce4a1094fc4b9eb4ef2547)](https://www.codacy.com/app/bittyphp/bitty-mustache)
+[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/e34be4340dce4a1094fc4b9eb4ef2547)](https://www.codacy.com/app/bittyphp/bitty-mustache)
 [![Total Downloads](https://poser.pugx.org/bittyphp/bitty-mustache/downloads)](https://packagist.org/packages/bittyphp/bitty-mustache)
 [![License](https://poser.pugx.org/bittyphp/bitty-mustache/license)](https://packagist.org/packages/bittyphp/bitty-mustache)
 
