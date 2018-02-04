@@ -11,7 +11,7 @@
     ],
     "require": {
         "php": ">=5.5.0",
-        "bittyphp/bitty": "*",
+        "bittyphp/bitty-view": "^1.0",
         "mustache/mustache": "^2.5"
     },
     "require-dev": {
@@ -20,12 +20,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Bitty\\" : "src/"
+            "Bitty\\View\\" : "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Bitty\\Tests\\": "tests/"
+            "Bitty\\Tests\\View\\": "tests/"
         }
     },
     "minimum-stability": "dev"
