@@ -6,9 +6,9 @@ use Bitty\View\AbstractView;
 use Bitty\View\Mustache;
 use Mustache_Engine;
 use Mustache_Loader;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class MustacheTest extends PHPUnit_Framework_TestCase
+class MustacheTest extends TestCase
 {
     /**
      * @var Mustache
