@@ -56,7 +56,7 @@ class Mustache extends AbstractView
     /**
      * {@inheritDoc}
      */
-    public function render($template, $data = [])
+    public function render(string $template, $data = []): string
     {
         return $this->engine->loadTemplate($template)->render($data);
     }
@@ -68,7 +68,7 @@ class Mustache extends AbstractView
      *
      * @return Mustache_Loader
      */
-    public function getLoader()
+    public function getLoader(): Mustache_Loader
     {
         return $this->loader;
     }
@@ -80,7 +80,7 @@ class Mustache extends AbstractView
      *
      * @return Mustache_Engine
      */
-    public function getEngine()
+    public function getEngine(): Mustache_Engine
     {
         return $this->engine;
     }
