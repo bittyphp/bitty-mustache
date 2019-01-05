@@ -9,13 +9,8 @@
             "email": "bizurkur@gmail.com"
         }
     ],
-    "config": {
-        "platform": {
-            "php": "5.5.9"
-        }
-    },
     "require": {
-        "php": ">=5.5.9",
+        "php": ">=7.1.0",
         "bittyphp/bitty-view": "^1.0",
         "mustache/mustache": "^2.5"
     },
@@ -33,5 +28,5 @@
             "Bitty\\Tests\\View\\": "tests/"
         }
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "stable"
 }
