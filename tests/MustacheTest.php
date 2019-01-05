@@ -6,16 +6,16 @@ use Bitty\View\AbstractView;
 use Bitty\View\Mustache;
 use Mustache_Engine;
 use Mustache_Loader;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class MustacheTest extends PHPUnit_Framework_TestCase
+class MustacheTest extends TestCase
 {
     /**
      * @var Mustache
      */
     protected $fixture = null;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
 
@@ -27,22 +27,22 @@ class MustacheTest extends PHPUnit_Framework_TestCase
         );
     }
 
-    public function testInstanceOf()
+    public function testInstanceOf(): void
     {
-        $this->assertInstanceOf(AbstractView::class, $this->fixture);
+        self::assertInstanceOf(AbstractView::class, $this->fixture);
     }
 
     /**
      * @dataProvider sampleRender
      */
-    public function testRender($template, $data, $expected)
+    public function testRender(string $template, array $data, string $expected): void
     {
         $actual = $this->fixture->render($template, $data);
 
-        $this->assertEquals($expected, $actual);
+        self::assertEquals($expected, $actual);
     }
 
-    public function sampleRender()
+    public function sampleRender(): array
     {
         $value = uniqid('value');
 
@@ -65,27 +65,27 @@ class MustacheTest extends PHPUnit_Framework_TestCase
         ];
     }
 
-    public function testRenderNonDefaultExtension()
+    public function testRenderNonDefaultExtension(): void
     {
         $value = uniqid('value');
 
         $fixture = new Mustache(__DIR__.'/templates/', ['extension' => '.html']);
         $actual  = $fixture->render('baz', ['baz' => $value]);
 
-        $this->assertEquals('Baz is '.$value.PHP_EOL, $actual);
+        self::assertEquals('Baz is '.$value.PHP_EOL, $actual);
     }
 
-    public function testGetLoader()
+    public function testGetLoader(): void
     {
         $actual = $this->fixture->getLoader();
 
-        $this->assertInstanceOf(Mustache_Loader::class, $actual);
+        self::assertInstanceOf(Mustache_Loader::class, $actual);
     }
 
-    public function testGetEngine()
+    public function testGetEngine(): void
     {
         $actual = $this->fixture->getEngine();
 
-        $this->assertInstanceOf(Mustache_Engine::class, $actual);
+        self::assertInstanceOf(Mustache_Engine::class, $actual);
     }
 }
