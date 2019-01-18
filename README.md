@@ -5,7 +5,7 @@
 [![Total Downloads](https://poser.pugx.org/bittyphp/bitty-mustache/downloads)](https://packagist.org/packages/bittyphp/bitty-mustache)
 [![License](https://poser.pugx.org/bittyphp/bitty-mustache/license)](https://packagist.org/packages/bittyphp/bitty-mustache)
 
-A Mustache template view for Bitty.
+A [Mustache](https://github.com/bobthecow/mustache.php) template view for Bitty.
 
 ## Installation
 
