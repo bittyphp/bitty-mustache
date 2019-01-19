@@ -1,9 +1,9 @@
-# Bitty Mustache
+# Mustache View
 
-[![Build Status](https://travis-ci.org/bittyphp/bitty-mustache.svg?branch=master)](https://travis-ci.org/bittyphp/bitty-mustache)
-[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/e34be4340dce4a1094fc4b9eb4ef2547)](https://www.codacy.com/app/bittyphp/bitty-mustache)
-[![Total Downloads](https://poser.pugx.org/bittyphp/bitty-mustache/downloads)](https://packagist.org/packages/bittyphp/bitty-mustache)
-[![License](https://poser.pugx.org/bittyphp/bitty-mustache/license)](https://packagist.org/packages/bittyphp/bitty-mustache)
+[![Build Status](https://travis-ci.org/bittyphp/view-mustache.svg?branch=master)](https://travis-ci.org/bittyphp/view-mustache)
+[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/e34be4340dce4a1094fc4b9eb4ef2547)](https://www.codacy.com/app/bittyphp/view-mustache)
+[![Total Downloads](https://poser.pugx.org/bittyphp/view-mustache/downloads)](https://packagist.org/packages/bittyphp/view-mustache)
+[![License](https://poser.pugx.org/bittyphp/view-mustache/license)](https://packagist.org/packages/bittyphp/view-mustache)
 
 A [Mustache](https://github.com/bobthecow/mustache.php) template view for Bitty.
 
@@ -12,7 +12,7 @@ A [Mustache](https://github.com/bobthecow/mustache.php) template view for Bitty.
 It's best to install using [Composer](https://getcomposer.org/).
 
 ```sh
-$ composer require bittyphp/bitty-mustache
+$ composer require bittyphp/view-mustache
 ```
 
 ## Setup
