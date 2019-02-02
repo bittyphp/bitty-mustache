@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/bittyphp/view-mustache.svg?branch=master)](https://travis-ci.org/bittyphp/view-mustache)
 [![Codacy Badge](https://api.codacy.com/project/badge/Coverage/e34be4340dce4a1094fc4b9eb4ef2547)](https://www.codacy.com/app/bittyphp/view-mustache)
 [![PHPStan Enabled](https://img.shields.io/badge/PHPStan-enabled-brightgreen.svg?style=flat)](https://github.com/phpstan/phpstan)
+[![Mutation Score](https://badge.stryker-mutator.io/github.com/bittyphp/view-mustache/master)](https://infection.github.io)
 [![Total Downloads](https://poser.pugx.org/bittyphp/view-mustache/downloads)](https://packagist.org/packages/bittyphp/view-mustache)
 [![License](https://poser.pugx.org/bittyphp/view-mustache/license)](https://packagist.org/packages/bittyphp/view-mustache)
 
