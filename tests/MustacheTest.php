@@ -33,6 +33,31 @@ class MustacheTest extends TestCase
     }
 
     /**
+     * @param mixed $paths
+     * @param string $expected
+     *
+     * @dataProvider sampleInvalidPaths
+     */
+    public function testInvalidPaths($paths, string $expected): void
+    {
+        self::expectException(\InvalidArgumentException::class);
+        self::expectExceptionMessage('Path must be a string or an array; '.$expected.' given.');
+
+        new Mustache($paths);
+    }
+
+    public function sampleInvalidPaths(): array
+    {
+        return [
+            'null' => [null, 'NULL'],
+            'object' => [(object) [], 'object'],
+            'false' => [false, 'boolean'],
+            'true' => [true, 'boolean'],
+            'int' => [rand(), 'integer'],
+        ];
+    }
+
+    /**
      * @dataProvider sampleRender
      */
     public function testRender(string $template, array $data, string $expected): void
@@ -65,6 +90,32 @@ class MustacheTest extends TestCase
         ];
     }
 
+    public function testStrictCallable(): void
+    {
+        $value = uniqid('value');
+
+        $data = [
+            'foo' => function () use ($value) {
+                return $value;
+            },
+        ];
+
+        $actual = $this->fixture->render('foo', $data);
+
+        self::assertEquals('Foo is '.$value.PHP_EOL, $actual);
+    }
+
+    public function testNonStrictCallableFails(): void
+    {
+        try {
+            $this->fixture->render('foo', ['foo' => [$this, 'getCallable']]);
+            self::fail('Strict callables is not enabled.');
+        } catch (\Exception $exception) {
+            $expected = 'htmlspecialchars() expects parameter 1 to be string, array given';
+            self::assertEquals($expected, $exception->getMessage());
+        }
+    }
+
     public function testRenderNonDefaultExtension(): void
     {
         $value = uniqid('value');
@@ -87,5 +138,15 @@ class MustacheTest extends TestCase
         $actual = $this->fixture->getEngine();
 
         self::assertInstanceOf(Mustache_Engine::class, $actual);
+    }
+
+    /**
+     * Sample non-strict callable.
+     *
+     * @return string
+     */
+    public function getCallable(): string
+    {
+        return uniqid();
     }
 }

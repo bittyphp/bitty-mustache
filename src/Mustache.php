@@ -42,9 +42,23 @@ class Mustache extends AbstractView
         }
 
         $this->loader = new Mustache_Loader_CascadingLoader();
-        foreach ((array) $paths as $path) {
+
+        if (is_string($paths)) {
             $this->loader->addLoader(
-                new Mustache_Loader_FilesystemLoader($path, $loaderOptions)
+                new Mustache_Loader_FilesystemLoader($paths, $loaderOptions)
+            );
+        } elseif (is_array($paths)) {
+            foreach ($paths as $path) {
+                $this->loader->addLoader(
+                    new Mustache_Loader_FilesystemLoader($path, $loaderOptions)
+                );
+            }
+        } else {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    'Path must be a string or an array; %s given.',
+                    gettype($paths)
+                )
             );
         }
 
