@@ -22,12 +22,12 @@ class Mustache extends AbstractView
     /**
     * @var Mustache_Loader
     */
-    protected $loader = null;
+    private $loader = null;
 
     /**
      * @var Mustache_Engine
      */
-    protected $engine = null;
+    private $engine = null;
 
     /**
      * @param string[]|string $paths
