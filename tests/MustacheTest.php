@@ -58,6 +58,10 @@ class MustacheTest extends TestCase
     }
 
     /**
+     * @param string $template
+     * @param mixed[] $data
+     * @param string $expected
+     *
      * @dataProvider sampleRender
      */
     public function testRender(string $template, array $data, string $expected): void
@@ -110,7 +114,7 @@ class MustacheTest extends TestCase
         try {
             $this->fixture->render('foo', ['foo' => [$this, 'getCallable']]);
             self::fail('Strict callables is not enabled.');
-        } catch (\Exception $exception) {
+        } catch (\Throwable $exception) {
             $expected = 'htmlspecialchars() expects parameter 1 to be string, array given';
             self::assertEquals($expected, $exception->getMessage());
         }
