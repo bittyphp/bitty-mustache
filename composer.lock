@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
     "content-hash": "5115e7e15e345c3b1b9a9d347e56545c",
@@ -307,16 +307,16 @@
     "packages-dev": [
         {
             "name": "bizurkur/coding-standard",
-            "version": "1.0.4",
+            "version": "1.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bizurkur/coding-standard.git",
-                "reference": "dd66b282baa5282eff4045997ff649f72d02fadf"
+                "reference": "9452b166fb5faf849aad554889b8e57120b5af9e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bizurkur/coding-standard/zipball/dd66b282baa5282eff4045997ff649f72d02fadf",
-                "reference": "dd66b282baa5282eff4045997ff649f72d02fadf",
+                "url": "https://api.github.com/repos/bizurkur/coding-standard/zipball/9452b166fb5faf849aad554889b8e57120b5af9e",
+                "reference": "9452b166fb5faf849aad554889b8e57120b5af9e",
                 "shasum": ""
             },
             "require": {
@@ -337,7 +337,7 @@
                 }
             ],
             "description": "Bizurkur coding standard.",
-            "time": "2019-02-09T13:33:42+00:00"
+            "time": "2019-02-10T21:08:28+00:00"
         },
         {
             "name": "codacy/coverage",
@@ -3904,7 +3904,7 @@
                 },
                 {
                     "name": "Gert de Pagter",
-                    "email": "backendtea@gmail.com"
+                    "email": "BackEndTea@gmail.com"
                 }
             ],
             "description": "Symfony polyfill for ctype functions",
